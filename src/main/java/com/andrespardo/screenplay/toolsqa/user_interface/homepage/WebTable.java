@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.targets.Target;
 public class WebTable {
     public static final Target ADD= Target.the("WEBTABLE ADD BUTTON PAGE").locatedBy("//button[@id='addNewRecordButton']");
     public static final Target FIRSTNAME= Target.the("WEBTABLE FIRSTNAME FIELD PAGE").locatedBy("//input[@id='firstName']");
+    public static final Target SURNAME= Target.the("WEBTABLE SURNAME FIELD PAGE").locatedBy("//input[@id='surname']");
 
 
 }
