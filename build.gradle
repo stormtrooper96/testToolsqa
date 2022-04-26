@@ -5,14 +5,14 @@ repositories {
 }
 
 buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
-  }
-  dependencies {
-    classpath "net.serenity-bdd:serenity-gradle-plugin:3.2.0"
-  }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.2.0"
+    }
 }
 
 
@@ -26,17 +26,16 @@ targetCompatibility = 1.8
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.2.0'
-    serenityCucumberVersion = '3.2.0'
-    junitVersion = '4.13.1'
-    assertJVersion = '3.8.0'
-    logbackVersion = '1.2.10'
+    serenityCoreVersion = '3.2.3'
+    serenityCucumberVersion = '3.2.3'
+    junitVersion = '4.13.2'
+    assertJVersion = '3.22.0'
+    logbackVersion = '1.2.11'
 }
 
 dependencies {
-    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
-
-    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+    implementation "ch.qos.logback:logback-classic:${logbackVersion}",
+            "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
@@ -45,7 +44,9 @@ dependencies {
             "org.junit.platform:junit-platform-launcher:1.8.2",
             "org.junit.jupiter:junit-jupiter-engine:5.8.2",
             "org.junit.vintage:junit-vintage-engine:5.8.2",
-            "org.assertj:assertj-core:${assertJVersion}"
+            "org.assertj:assertj-core:${assertJVersion}",
+            'log4j:log4j:1.2.17',
+            'com.opencsv:opencsv:5.6'
 }
 
 test {
@@ -55,7 +56,7 @@ test {
 
 serenity {
     // Specify the root package of any JUnit acceptance tests to appear in the Serenity report
-    testRoot = "starter"
+    //testRoot = "starter"
     // Specify the root directory of any Cucumber feature files
     requirementsDir = "src/test/resources/features"
 
