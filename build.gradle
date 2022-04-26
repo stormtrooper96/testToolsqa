@@ -3,6 +3,9 @@ defaultTasks 'clean', 'test', 'aggregate'
 repositories {
     mavenCentral()
 }
+plugins {
+    id "org.sonarqube" version "3.3"
+}
 
 buildscript {
     repositories {
@@ -60,6 +63,14 @@ serenity {
     // Specify the root directory of any Cucumber feature files
     requirementsDir = "src/test/resources/features"
 
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "stormtrooper96_testToolsqa"
+        property "sonar.organization", "stormtrooper96"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
 
 gradle.startParameter.continueOnFailure = true
