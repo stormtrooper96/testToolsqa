@@ -10,8 +10,7 @@ public class LoadingRightHomeQuestion implements Question<Boolean> {
         return  HomePage.ICON.isVisibleFor(actor)&&
                 HomePage.CARDS.isVisibleFor(actor)&&
                 HomePage.ElELEMENTS.isVisibleFor(actor)&&
-                HomePage.BANNER.isVisibleFor(actor)&&
-                HomePage.CARDS.isVisibleFor(actor);
+                HomePage.BANNER.isVisibleFor(actor);
     }
     public static Question<Boolean> value(){return new LoadingRightHomeQuestion();}
 }

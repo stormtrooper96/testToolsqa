@@ -1,8 +1,10 @@
 package com.andrespardo.screenplay.toolsqa.user_interface.homepage;
 
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import net.serenitybdd.screenplay.targets.Target;
-
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ElementsPage {
     public static final Target ICON= Target.the("LOGO PAGE").locatedBy("//img[@src='/images/Toolsqa.jpg']");
 
