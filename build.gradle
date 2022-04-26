@@ -3,9 +3,6 @@ defaultTasks 'clean', 'test', 'aggregate'
 repositories {
     mavenCentral()
 }
-plugins {
-    id "org.sonarqube" version "3.3"
-}
 
 buildscript {
     repositories {
@@ -50,6 +47,7 @@ dependencies {
             "org.assertj:assertj-core:${assertJVersion}",
             'log4j:log4j:1.2.17',
             'com.opencsv:opencsv:5.6'
+
 }
 
 test {
@@ -65,13 +63,7 @@ serenity {
 
 }
 
-sonarqube {
-    properties {
-        property "sonar.projectKey", "stormtrooper96_testToolsqa"
-        property "sonar.organization", "stormtrooper96"
-        property "sonar.host.url", "https://sonarcloud.io"
-    }
-}
+
 
 gradle.startParameter.continueOnFailure = true
 
