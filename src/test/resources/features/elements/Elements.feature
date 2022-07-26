@@ -9,7 +9,7 @@ Feature: Elements page
     When he looks up Elements Menu Right
     Then Press Button Web Tables
     Then Press Button Add register
-    Then Send data to register: firstname "<firstname>" lastname "<lastName>" userEmail "<userEmail>"  age "<age>" salary <salary>  departament<department>
+    Then Send data to register: firstname "<firstname>" lastname "<lastName>" userEmail "<userEmail>"  age "<age>" salary <salary>  departament "<department>"
 
     Examples:
       | firstname | lastName | userEmail         | age | salary   | department   | pagina   |

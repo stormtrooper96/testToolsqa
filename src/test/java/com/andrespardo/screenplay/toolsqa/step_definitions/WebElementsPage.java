@@ -4,6 +4,7 @@ import com.andrespardo.screenplay.toolsqa.questions.LoadingRightElementsMenuQues
 import com.andrespardo.screenplay.toolsqa.questions.LoadingRightHomeQuestion;
 import com.andrespardo.screenplay.toolsqa.tasks.GoToElementsTabTask;
 import com.andrespardo.screenplay.toolsqa.tasks.OpenPageTask;
+import com.andrespardo.screenplay.toolsqa.tasks.SendFormTask;
 import com.andrespardo.screenplay.toolsqa.user_interface.homepage.ElementsPage;
 import com.andrespardo.screenplay.toolsqa.user_interface.homepage.HomePage;
 import com.andrespardo.screenplay.toolsqa.user_interface.homepage.WebTable;
@@ -51,9 +52,11 @@ public class WebElementsPage {
                 Click.on(WebTable.ADD));
     }
 
-    @Then("Send data to register: firstname {string} lastname {string} userEmail {string}  age {string} salary {int}  departamentcartagena")
-    public void sendDataToRegisterFirstnameLastnameUserEmailAgeSalaryDepartamentcartagena(String string, String string2, String string3, String string4, Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("Send data to register: firstname {string} lastname {string} userEmail {string}  age {string} salary {int}  departament {string}")
+    public void sendDataToRegisterFirstnameLastnameUserEmailAgeSalaryDepartament(String string, String string2, String string3, String string4, Integer int1, String string5) {
+        homePageSteps.aa.attemptsTo(SendFormTask.on(string5,string,string2,int1+"",string3,string4));
     }
+
+
+
 }
